@@ -17,9 +17,9 @@ var rootCmd = &cobra.Command{
 }
 
 func main() {
-	installCmd := commands.NewInstallCommand()
-	u := commands.NewUninstallCommand()
-	rootCmd.AddCommand(u)
-	rootCmd.AddCommand(installCmd)
+	getCmd := commands.NewGetCommand()
+	removeCmd := commands.NewRemoveCommand()
+	rootCmd.AddCommand(removeCmd)
+	rootCmd.AddCommand(getCmd)
 	rootCmd.Execute()
 }
